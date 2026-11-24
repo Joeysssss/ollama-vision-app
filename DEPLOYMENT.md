@@ -18,8 +18,11 @@
   - 通過金鑰安全讀取 (`get_api_key`) 與無金鑰容錯測試。
   - 通過模擬呼叫之結構化錯誤回傳測試。
   - 通過 Streamlit 伺服器啟動與健康檢查 (Health Check 200 OK)。
-- [ ] **階段四：Git 初始化與 GitHub 上傳** (進行中)
-- [ ] **階段五：Streamlit Community Cloud 雲端部署** (待執行)
+- [x] **階段四：Git 初始化與 GitHub 上傳** (完成)
+  - 成功建立 Private Repository：`https://github.com/Joeysssss/ollama-vision-app`。
+  - 將主分支重命名為 `main` 並完整推播遠端，確認無任何 API Key 或機密資料。
+- [ ] **階段五：Streamlit Community Cloud 雲端部署** (進行中)
+  - 建立一鍵部署直連連結，等待使用者登入 GitHub 授權並於 Secrets 中填入金鑰。
 
 ---
 
@@ -72,15 +75,14 @@
 
 ## ⚠️ 五、尚未解決的問題與已知限制
 
-1. **真實 API Key 驗證**：本機目前未預設配置真實的 `OLLAMA_API_KEY` 與 `GROQ_API_KEY`，實際多模態推論需於 Streamlit Secrets 或介面中輸入真實金鑰方可測試。
-2. **GitHub 遠端庫建立**：需透過 GitHub CLI (`gh repo create`) 在 `Joeysssss` 帳號下建立 Private Repository。
+1. **真實 API Key 驗證**：專案目前未預設配置真實的 `OLLAMA_API_KEY` 與 `GROQ_API_KEY`，實際多模態推論需於 Streamlit Cloud Secrets 或本機網頁側邊欄中由使用者輸入真實金鑰方可測試。
+2. **Streamlit Cloud 授權**：Streamlit Community Cloud 需透過使用者本人的 GitHub 帳號登入授權（OAuth）。
 
 ---
 
 ## 📋 六、後續執行步驟
 
-1. 執行本機自動化測試（使用 Python 測試啟動、金鑰缺漏保護與圖片解析邏輯）。
-2. 在 `ollama-vision-app` 初始化 Git、建立 Commit，並檢查無敏感金鑰或個人圖片。
-3. 建立遠端 Private Repository `Joeysssss/ollama-vision-app` 並推送。
-4. 前往 Streamlit Community Cloud 完成 App 部署與 Secrets 設定。
-5. 更新 `DEPLOYMENT.md` 與 `README.md` 中的上線網址。
+1. 使用者點擊 Streamlit Community Cloud 一鍵部署連結。
+2. 授權 GitHub 帳號 `Joeysssss`。
+3. 進入 Advanced Settings -> Secrets，貼上真實的 `OLLAMA_API_KEY` 與 `GROQ_API_KEY`。
+4. 點擊 Deploy 完成雲端部署。
