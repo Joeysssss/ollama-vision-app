@@ -1,0 +1,29 @@
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Python cache & virtual environment
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+ENV/
+env/
+
+# Test images and sensitive files
+*.jpg
+*.jpeg
+*.png
+*.pdf
+
+# IDE and OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
