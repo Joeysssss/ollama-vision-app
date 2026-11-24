@@ -131,4 +131,4 @@ python -m streamlit run app.py
 
 ## 🔗 雲端網站連結
 
-- **Streamlit Community Cloud 網址**：`https://joey-ollama-vision.streamlit.app`（待部署完成後開通）
+- **Streamlit Community Cloud 網址**：`https://ollama-vision-app-14366033.streamlit.app/`
